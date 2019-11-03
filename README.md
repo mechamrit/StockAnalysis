@@ -1,2 +1,28 @@
 # StockAnalysis
-We will analyze the stock market prices with the pandas and numpy.
+1 Downloading and preprocessing the data
+In this we are going to get familiar with pandas, the python module which is used to process and analyse data. Processing could include removing unknown values from the data or replacing unknown values with values which make sense, maybe 0. Analysing the data could include finding out the trend of a stock price, e.g. how the stock price changes with respect to the Nifty 50 basket of stocks or S&P500. The data was stored in the pandas dataframe. We calculated the max and min price of last 90 days. Then we analysed the data types and converted the date into the datetime64(ns) for performing operations based on the date. In this finally we calculated VWAP (Volume weighted average price) of the stack. ( VWAP = sum(price*volume)/sum(volume) ) [https://www.investopedia.com/terms/v/vwap.asp].
+Adding a column “Day Perc Change” where the values are the daily change in percentage i.e. percentage change between the two consecutive days closing price and then with the help of this info add info in the trend column.
+
+2 Data visualization and Technical Analysis
+'A picture speaks a thousand words' has never been truer in financial markets. Absolutely no one goes through the millions of rows of numbers, we always prefer the data in a plotted form to draw better inferences. This module would cover the plotting, basic technical indicators and our own customisation, and making our own trade calls. Plotting the stock price will give the general trend of the stock. Then we plotted the stem plot and analyze the relation between volume and daily percentage change.  We plotted the pi-chart for all the trend. 
+We next analyse the behaviour of different stocks and how they are correlated. The correlation is performed on the percentage change of the stock price of the 5 stocks. Volatility of the stocks are carried out. Volatility is the change in variance in the returns of a stock over a specific period of time. https://www.investopedia.com/terms/v/volatility.asp
+
+The calculation of volatility lead to useful indicator known as beta. Bollinger band are plotted which are extremely reliable, with a 95% accuracy at 2 standard deviations. 
+
+3 Fundamental analysis using Regression
+This module would introduce us to the Regression related inferences to be drawn from the data. Regression is basically a statistical approach to find the relationship between variables. In machine learning, this is used to predict the outcome of an event based on the relationship between variables obtained from the data-set. More often than not, we utilize linear regression to come up with an ideal inference. We'd be using the regression model to predict the gold prices.
+CAPM CAPM Analysis and Beta Calculation using regression -
+CAPM(Capital Asset Pricing Model) attempts to price securities by examining the relationship that exists between expected returns and risk. (Investopedia CAPM reference) The Beta of an asset is a measure of the sensitivity of its returns relative to a market benchmark (usually a market index). How sensitive/insensitive is the returns of an asset to the overall market returns (usually a market index like S&P 500 index). What happens when the market jumps, does the returns of the asset jump accordingly or jump somehow. So in this case beta is generally the coefficient of linear regression model.
+
+4 Trade Call Prediction using Classification
+we'd be covering the concept of classification and utilize our skills to predict on basis of classification. The classification model is trained on the bollinger columns and stock price as input and as output. We will utilize the classification model to make a trade call and measure the efficiency of our trading algo. 
+
+5 Modern Portfolio Theory
+In this module, We’ll be looking at investment portfolio optimization with python, the fundamental concept of diversification and the creation of an efficient frontier that can be used by investors to choose specific mixes of assets based on investment goals; that is, the trade off between their desired level of portfolio return vs their desired level of portfolio risk.
+Modern Portfolio Theory suggests that it is possible to construct an "efficient frontier" of optimal portfolios offering the maximum possible expected return for a given level of risk. It suggests that it is not enough to look at the expected risk and return of one particular stock. By investing in more than one stock, an investor can reap the benefits of diversification, particularly a reduction in the riskiness of the portfolio. MPT quantifies the benefits of diversification, also known as not putting all of your eggs in one basket. 
+
+4.6 Clustering for Diversification analysis
+Clustering is a method of unsupervised learning and is a common technique for statistical data analysis used in many fields.
+Clustering is a Machine Learning technique that involves the grouping of data points. Given a set of data points, we can use a clustering algorithm to classify each data point into a specific group. In theory, data points that are in the same group should have similar properties and/or features, while data points in different groups should have highly dissimilar properties and/or features.
+In financial Markets, Cluster analysis is a technique used to group sets of objects that share similar characteristics. It is common in statistics, but investors will use the approach to build a diversified portfolio. Stocks that exhibit high correlations in returns fall into one basket, those slightly less correlated in another, and so on, until each stock is placed into a category.
+
