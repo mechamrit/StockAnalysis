@@ -1,4 +1,4 @@
-# StockAnalysis
+# StockAnalysis | A Must Need For Begineer Traders
 1 Downloading and preprocessing the data
 In this we are going to get familiar with pandas, the python module which is used to process and analyse data. Processing could include removing unknown values from the data or replacing unknown values with values which make sense, maybe 0. Analysing the data could include finding out the trend of a stock price, e.g. how the stock price changes with respect to the Nifty 50 basket of stocks or S&P500. The data was stored in the pandas dataframe. We calculated the max and min price of last 90 days. Then we analysed the data types and converted the date into the datetime64(ns) for performing operations based on the date. In this finally we calculated VWAP (Volume weighted average price) of the stack. ( VWAP = sum(price*volume)/sum(volume) ) [https://www.investopedia.com/terms/v/vwap.asp].
 Adding a column “Day Perc Change” where the values are the daily change in percentage i.e. percentage change between the two consecutive days closing price and then with the help of this info add info in the trend column.
